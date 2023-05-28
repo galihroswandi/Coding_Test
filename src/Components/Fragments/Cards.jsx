@@ -46,7 +46,7 @@ const Cards = () => {
       <Card hidden={hide && `hide`}>
         <FormNumber name="number_input" />
       </Card>
-      <Card>
+      <Card hidden={!hide && `hide`}>
         <div className="w-full">
           <h1 className="text-primary mb-2">Total {point}</h1>
           <TablePoint />
@@ -56,7 +56,7 @@ const Cards = () => {
           />
         </div>
       </Card>
-      <Card>
+      <Card hidden={!hide && `hide`}>
         {showActive && (
           <h1 className="text-4xl md:text-5xl text-primary text-center">
             {valueShow}
